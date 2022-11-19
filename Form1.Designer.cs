@@ -148,6 +148,7 @@
             this.btnmodifier.TabIndex = 1;
             this.btnmodifier.Text = "modifier";
             this.btnmodifier.UseVisualStyleBackColor = true;
+            this.btnmodifier.Click += new System.EventHandler(this.btnmodifier_Click);
             // 
             // btnsupprimer
             // 

@@ -24,8 +24,10 @@ namespace Examen
             cnx.Open();
            
             cmd.Connection = cnx;
-           
-           
+            
+
+
+
 
         }
 
@@ -64,12 +66,12 @@ namespace Examen
 
         private void btnajouter_Click(object sender, EventArgs e)
         {
-           
-            cnx.Open();
-            cmd.Connection = cnx;
+
+            connection();
             cmd.CommandText = "insert into E_xamen(id_e,date_debut,id_qu) values('" + txrid_e.Text + "','" + txrdate_debut.Text + "','" + txrid_qu.Text + "') ";
             cmd.ExecuteNonQuery();
             cnx.Close();
+
 
         }
 
@@ -85,6 +87,13 @@ namespace Examen
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dgrExamen.DataSource = dt;
+            cnx.Close();
+        }
+
+        private void btnmodifier_Click(object sender, EventArgs e)
+        {
+            connection();
+            cmd.CommandText = "UPDATE E_xamen set date_debut ='" + txrdate_debut.Text + "' where id_e='" + txrid_e.Text + "' ";
             cnx.Close();
         }
     }
