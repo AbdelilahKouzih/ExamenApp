@@ -55,5 +55,10 @@ namespace Examen
         {
 
         }
+
+        private void dgrExamen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -41,6 +41,9 @@
             this.btnsupprimer = new System.Windows.Forms.Button();
             this.btnvalider = new System.Windows.Forms.Button();
             this.btnannuler = new System.Windows.Forms.Button();
+            this.txtid_pro = new System.Windows.Forms.TextBox();
+            this.lblid_pro = new System.Windows.Forms.Label();
+            this.btnafficher = new System.Windows.Forms.Button();
             this.pnl1recherche.SuspendLayout();
             this.pnlbutton.SuspendLayout();
             this.pnl2affichage.SuspendLayout();
@@ -49,23 +52,26 @@
             // 
             // pnl1recherche
             // 
+            this.pnl1recherche.Controls.Add(this.lblid_pro);
+            this.pnl1recherche.Controls.Add(this.txtid_pro);
             this.pnl1recherche.Controls.Add(this.lbrt_ype);
             this.pnl1recherche.Controls.Add(this.lbrid_q);
             this.pnl1recherche.Controls.Add(this.txrt_ype);
             this.pnl1recherche.Controls.Add(this.txrid_q);
             this.pnl1recherche.Location = new System.Drawing.Point(19, 27);
             this.pnl1recherche.Name = "pnl1recherche";
-            this.pnl1recherche.Size = new System.Drawing.Size(764, 102);
+            this.pnl1recherche.Size = new System.Drawing.Size(764, 153);
             this.pnl1recherche.TabIndex = 0;
             // 
             // pnlbutton
             // 
+            this.pnlbutton.Controls.Add(this.btnafficher);
             this.pnlbutton.Controls.Add(this.btnannuler);
             this.pnlbutton.Controls.Add(this.btnvalider);
             this.pnlbutton.Controls.Add(this.btnsupprimer);
             this.pnlbutton.Controls.Add(this.btnmodifier);
             this.pnlbutton.Controls.Add(this.btnajouter);
-            this.pnlbutton.Location = new System.Drawing.Point(18, 369);
+            this.pnlbutton.Location = new System.Drawing.Point(19, 469);
             this.pnlbutton.Name = "pnlbutton";
             this.pnlbutton.Size = new System.Drawing.Size(764, 69);
             this.pnlbutton.TabIndex = 1;
@@ -73,7 +79,7 @@
             // pnl2affichage
             // 
             this.pnl2affichage.Controls.Add(this.dgrExamen);
-            this.pnl2affichage.Location = new System.Drawing.Point(18, 135);
+            this.pnl2affichage.Location = new System.Drawing.Point(19, 213);
             this.pnl2affichage.Name = "pnl2affichage";
             this.pnl2affichage.Size = new System.Drawing.Size(764, 228);
             this.pnl2affichage.TabIndex = 2;
@@ -81,12 +87,13 @@
             // dgrExamen
             // 
             this.dgrExamen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrExamen.Location = new System.Drawing.Point(1, 0);
+            this.dgrExamen.Location = new System.Drawing.Point(0, 0);
             this.dgrExamen.Name = "dgrExamen";
             this.dgrExamen.RowHeadersWidth = 51;
             this.dgrExamen.RowTemplate.Height = 24;
-            this.dgrExamen.Size = new System.Drawing.Size(764, 227);
+            this.dgrExamen.Size = new System.Drawing.Size(764, 277);
             this.dgrExamen.TabIndex = 0;
+            this.dgrExamen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrExamen_CellContentClick);
             // 
             // txrid_q
             // 
@@ -167,11 +174,36 @@
             this.btnannuler.Text = "annuler";
             this.btnannuler.UseVisualStyleBackColor = true;
             // 
+            // txtid_pro
+            // 
+            this.txtid_pro.Location = new System.Drawing.Point(153, 109);
+            this.txtid_pro.Name = "txtid_pro";
+            this.txtid_pro.Size = new System.Drawing.Size(254, 22);
+            this.txtid_pro.TabIndex = 4;
+            // 
+            // lblid_pro
+            // 
+            this.lblid_pro.AutoSize = true;
+            this.lblid_pro.Location = new System.Drawing.Point(18, 115);
+            this.lblid_pro.Name = "lblid_pro";
+            this.lblid_pro.Size = new System.Drawing.Size(94, 16);
+            this.lblid_pro.TabIndex = 5;
+            this.lblid_pro.Text = "Id proposition :";
+            // 
+            // btnafficher
+            // 
+            this.btnafficher.Location = new System.Drawing.Point(654, 23);
+            this.btnafficher.Name = "btnafficher";
+            this.btnafficher.Size = new System.Drawing.Size(99, 36);
+            this.btnafficher.TabIndex = 5;
+            this.btnafficher.Text = "afficher";
+            this.btnafficher.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 580);
             this.Controls.Add(this.pnl2affichage);
             this.Controls.Add(this.pnlbutton);
             this.Controls.Add(this.pnl1recherche);
@@ -202,6 +234,9 @@
         private System.Windows.Forms.Button btnsupprimer;
         private System.Windows.Forms.Button btnmodifier;
         private System.Windows.Forms.Button btnajouter;
+        private System.Windows.Forms.Label lblid_pro;
+        private System.Windows.Forms.TextBox txtid_pro;
+        private System.Windows.Forms.Button btnafficher;
     }
 }
 
