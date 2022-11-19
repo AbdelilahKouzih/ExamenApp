@@ -32,17 +32,17 @@
             this.pnlbutton = new System.Windows.Forms.Panel();
             this.pnl2affichage = new System.Windows.Forms.Panel();
             this.dgrExamen = new System.Windows.Forms.DataGridView();
-            this.txrid_q = new System.Windows.Forms.TextBox();
-            this.txrt_ype = new System.Windows.Forms.TextBox();
-            this.lbrid_q = new System.Windows.Forms.Label();
-            this.lbrt_ype = new System.Windows.Forms.Label();
+            this.txrid_e = new System.Windows.Forms.TextBox();
+            this.txrdate_debut = new System.Windows.Forms.TextBox();
+            this.lbrid_e = new System.Windows.Forms.Label();
+            this.lbrdate_debut = new System.Windows.Forms.Label();
             this.btnajouter = new System.Windows.Forms.Button();
             this.btnmodifier = new System.Windows.Forms.Button();
             this.btnsupprimer = new System.Windows.Forms.Button();
             this.btnvalider = new System.Windows.Forms.Button();
             this.btnannuler = new System.Windows.Forms.Button();
-            this.txtid_pro = new System.Windows.Forms.TextBox();
-            this.lblid_pro = new System.Windows.Forms.Label();
+            this.txrid_qu = new System.Windows.Forms.TextBox();
+            this.lblid_qu = new System.Windows.Forms.Label();
             this.btnafficher = new System.Windows.Forms.Button();
             this.pnl1recherche.SuspendLayout();
             this.pnlbutton.SuspendLayout();
@@ -52,12 +52,12 @@
             // 
             // pnl1recherche
             // 
-            this.pnl1recherche.Controls.Add(this.lblid_pro);
-            this.pnl1recherche.Controls.Add(this.txtid_pro);
-            this.pnl1recherche.Controls.Add(this.lbrt_ype);
-            this.pnl1recherche.Controls.Add(this.lbrid_q);
-            this.pnl1recherche.Controls.Add(this.txrt_ype);
-            this.pnl1recherche.Controls.Add(this.txrid_q);
+            this.pnl1recherche.Controls.Add(this.lblid_qu);
+            this.pnl1recherche.Controls.Add(this.txrid_qu);
+            this.pnl1recherche.Controls.Add(this.lbrdate_debut);
+            this.pnl1recherche.Controls.Add(this.lbrid_e);
+            this.pnl1recherche.Controls.Add(this.txrdate_debut);
+            this.pnl1recherche.Controls.Add(this.txrid_e);
             this.pnl1recherche.Location = new System.Drawing.Point(19, 27);
             this.pnl1recherche.Name = "pnl1recherche";
             this.pnl1recherche.Size = new System.Drawing.Size(764, 153);
@@ -95,39 +95,40 @@
             this.dgrExamen.TabIndex = 0;
             this.dgrExamen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrExamen_CellContentClick);
             // 
-            // txrid_q
+            // txrid_e
             // 
-            this.txrid_q.Location = new System.Drawing.Point(153, 17);
-            this.txrid_q.Name = "txrid_q";
-            this.txrid_q.Size = new System.Drawing.Size(254, 22);
-            this.txrid_q.TabIndex = 0;
+            this.txrid_e.Location = new System.Drawing.Point(153, 17);
+            this.txrid_e.Name = "txrid_e";
+            this.txrid_e.Size = new System.Drawing.Size(254, 22);
+            this.txrid_e.TabIndex = 0;
+            this.txrid_e.TextChanged += new System.EventHandler(this.txrid_q_TextChanged);
             // 
-            // txrt_ype
+            // txrdate_debut
             // 
-            this.txrt_ype.Location = new System.Drawing.Point(153, 62);
-            this.txrt_ype.Name = "txrt_ype";
-            this.txrt_ype.Size = new System.Drawing.Size(254, 22);
-            this.txrt_ype.TabIndex = 1;
+            this.txrdate_debut.Location = new System.Drawing.Point(153, 62);
+            this.txrdate_debut.Name = "txrdate_debut";
+            this.txrdate_debut.Size = new System.Drawing.Size(254, 22);
+            this.txrdate_debut.TabIndex = 1;
             // 
-            // lbrid_q
+            // lbrid_e
             // 
-            this.lbrid_q.AutoSize = true;
-            this.lbrid_q.Location = new System.Drawing.Point(17, 20);
-            this.lbrid_q.Name = "lbrid_q";
-            this.lbrid_q.Size = new System.Drawing.Size(81, 16);
-            this.lbrid_q.TabIndex = 2;
-            this.lbrid_q.Text = "Id question : ";
-            this.lbrid_q.Click += new System.EventHandler(this.lbrid_q_Click);
+            this.lbrid_e.AutoSize = true;
+            this.lbrid_e.Location = new System.Drawing.Point(17, 20);
+            this.lbrid_e.Name = "lbrid_e";
+            this.lbrid_e.Size = new System.Drawing.Size(78, 16);
+            this.lbrid_e.TabIndex = 2;
+            this.lbrid_e.Text = "Id examen : ";
+            this.lbrid_e.Click += new System.EventHandler(this.lbrid_q_Click);
             // 
-            // lbrt_ype
+            // lbrdate_debut
             // 
-            this.lbrt_ype.AutoSize = true;
-            this.lbrt_ype.Location = new System.Drawing.Point(17, 68);
-            this.lbrt_ype.Name = "lbrt_ype";
-            this.lbrt_ype.Size = new System.Drawing.Size(118, 16);
-            this.lbrt_ype.TabIndex = 3;
-            this.lbrt_ype.Text = "Type de question :";
-            this.lbrt_ype.Click += new System.EventHandler(this.lbrt_ype_Click);
+            this.lbrdate_debut.AutoSize = true;
+            this.lbrdate_debut.Location = new System.Drawing.Point(18, 68);
+            this.lbrdate_debut.Name = "lbrdate_debut";
+            this.lbrdate_debut.Size = new System.Drawing.Size(96, 16);
+            this.lbrdate_debut.TabIndex = 3;
+            this.lbrdate_debut.Text = "date de debut :";
+            this.lbrdate_debut.Click += new System.EventHandler(this.lbrt_ype_Click);
             // 
             // btnajouter
             // 
@@ -137,6 +138,7 @@
             this.btnajouter.TabIndex = 0;
             this.btnajouter.Text = "ajouter";
             this.btnajouter.UseVisualStyleBackColor = true;
+            this.btnajouter.Click += new System.EventHandler(this.btnajouter_Click);
             // 
             // btnmodifier
             // 
@@ -174,21 +176,21 @@
             this.btnannuler.Text = "annuler";
             this.btnannuler.UseVisualStyleBackColor = true;
             // 
-            // txtid_pro
+            // txrid_qu
             // 
-            this.txtid_pro.Location = new System.Drawing.Point(153, 109);
-            this.txtid_pro.Name = "txtid_pro";
-            this.txtid_pro.Size = new System.Drawing.Size(254, 22);
-            this.txtid_pro.TabIndex = 4;
+            this.txrid_qu.Location = new System.Drawing.Point(153, 109);
+            this.txrid_qu.Name = "txrid_qu";
+            this.txrid_qu.Size = new System.Drawing.Size(254, 22);
+            this.txrid_qu.TabIndex = 4;
             // 
-            // lblid_pro
+            // lblid_qu
             // 
-            this.lblid_pro.AutoSize = true;
-            this.lblid_pro.Location = new System.Drawing.Point(18, 115);
-            this.lblid_pro.Name = "lblid_pro";
-            this.lblid_pro.Size = new System.Drawing.Size(94, 16);
-            this.lblid_pro.TabIndex = 5;
-            this.lblid_pro.Text = "Id proposition :";
+            this.lblid_qu.AutoSize = true;
+            this.lblid_qu.Location = new System.Drawing.Point(18, 115);
+            this.lblid_qu.Name = "lblid_qu";
+            this.lblid_qu.Size = new System.Drawing.Size(78, 16);
+            this.lblid_qu.TabIndex = 5;
+            this.lblid_qu.Text = "Id question :";
             // 
             // btnafficher
             // 
@@ -198,6 +200,7 @@
             this.btnafficher.TabIndex = 5;
             this.btnafficher.Text = "afficher";
             this.btnafficher.UseVisualStyleBackColor = true;
+            this.btnafficher.Click += new System.EventHandler(this.btnafficher_Click);
             // 
             // Form1
             // 
@@ -222,10 +225,10 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl1recherche;
-        private System.Windows.Forms.Label lbrt_ype;
-        private System.Windows.Forms.Label lbrid_q;
-        private System.Windows.Forms.TextBox txrt_ype;
-        private System.Windows.Forms.TextBox txrid_q;
+        private System.Windows.Forms.Label lbrdate_debut;
+        private System.Windows.Forms.Label lbrid_e;
+        private System.Windows.Forms.TextBox txrdate_debut;
+        private System.Windows.Forms.TextBox txrid_e;
         private System.Windows.Forms.Panel pnlbutton;
         private System.Windows.Forms.Panel pnl2affichage;
         private System.Windows.Forms.DataGridView dgrExamen;
@@ -234,8 +237,8 @@
         private System.Windows.Forms.Button btnsupprimer;
         private System.Windows.Forms.Button btnmodifier;
         private System.Windows.Forms.Button btnajouter;
-        private System.Windows.Forms.Label lblid_pro;
-        private System.Windows.Forms.TextBox txtid_pro;
+        private System.Windows.Forms.Label lblid_qu;
+        private System.Windows.Forms.TextBox txrid_qu;
         private System.Windows.Forms.Button btnafficher;
     }
 }

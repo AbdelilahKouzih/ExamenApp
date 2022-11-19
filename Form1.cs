@@ -25,7 +25,7 @@ namespace Examen
            
             cmd.Connection = cnx;
            
-            cnx.Close();
+           
 
         }
 
@@ -42,8 +42,9 @@ namespace Examen
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dgrExamen.DataSource = dt;
-           
-          
+            cnx.Close();
+
+
         }
 
         private void lbrid_q_Click(object sender, EventArgs e)
@@ -59,6 +60,32 @@ namespace Examen
         private void dgrExamen_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnajouter_Click(object sender, EventArgs e)
+        {
+           
+            cnx.Open();
+            cmd.Connection = cnx;
+            cmd.CommandText = "insert into E_xamen(id_e,date_debut,id_qu) values('" + txrid_e.Text + "','" + txrdate_debut.Text + "','" + txrid_qu.Text + "') ";
+            cmd.ExecuteNonQuery();
+            cnx.Close();
+
+        }
+
+        private void txrid_q_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnafficher_Click(object sender, EventArgs e)
+        {
+            connection();
+            cmd.CommandText = "select * from E_xamen";
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dgrExamen.DataSource = dt;
+            cnx.Close();
         }
     }
 }
