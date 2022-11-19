@@ -94,7 +94,15 @@ namespace Examen
         {
             connection();
             cmd.CommandText = "UPDATE E_xamen set date_debut ='" + txrdate_debut.Text + "' where id_e='" + txrid_e.Text + "' ";
+            cmd.ExecuteNonQuery();
             cnx.Close();
+        }
+
+        private void btnsupprimer_Click(object sender, EventArgs e)
+        {
+            txrid_e.Text = null;
+            txrdate_debut.Text=null;
+            txrid_qu.Text=null;
         }
     }
 }
