@@ -18,6 +18,17 @@ namespace Examen
             InitializeComponent();
         }
 
+        public void connection()
+        {
+
+            cnx.Open();
+           
+            cmd.Connection = cnx;
+           
+            cnx.Close();
+
+        }
+
         static string chaine = @"Data Source=DESKTOP-ID5FAVQ\SQLEXPRESS;Initial Catalog=CreationExamen;Integrated Security=True";
        
         static SqlConnection cnx = new SqlConnection(chaine);
@@ -26,7 +37,13 @@ namespace Examen
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            connection();
+            cmd.CommandText = "select * from E_xamen";
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dgrExamen.DataSource = dt;
+           
+          
         }
 
         private void lbrid_q_Click(object sender, EventArgs e)
