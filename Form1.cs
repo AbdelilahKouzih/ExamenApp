@@ -112,5 +112,17 @@ namespace Examen
             txrdate_debut.Text = null;
             txrid_qu.Text = null;
         }
+
+        private void btnquestion_Click(object sender, EventArgs e)
+        {
+            Question q = new Question();
+            q.Show();
+        }
+
+        private void btnproposition_Click(object sender, EventArgs e)
+        {
+            Proposition p = new Proposition();
+            p.Show();
+        }
     }
 }

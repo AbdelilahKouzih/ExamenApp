@@ -89,5 +89,17 @@ namespace Examen
             cmd.ExecuteNonQuery(); 
             cnx.Close();
         }
+
+        private void btnexamen_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+        }
+
+        private void btnproposition_Click(object sender, EventArgs e)
+        {
+            Proposition p = new Proposition();
+            p.Show();
+        }
     }
 }

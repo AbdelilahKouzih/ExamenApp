@@ -41,6 +41,8 @@
             this.txtpproposition = new System.Windows.Forms.TextBox();
             this.lblid_p = new System.Windows.Forms.Label();
             this.lblproposition = new System.Windows.Forms.Label();
+            this.btnexamen = new System.Windows.Forms.Button();
+            this.btnquestion = new System.Windows.Forms.Button();
             this.pnlp1.SuspendLayout();
             this.pnl3.SuspendLayout();
             this.pnlp2.SuspendLayout();
@@ -49,6 +51,8 @@
             // 
             // pnlp1
             // 
+            this.pnlp1.Controls.Add(this.btnquestion);
+            this.pnlp1.Controls.Add(this.btnexamen);
             this.pnlp1.Controls.Add(this.lblproposition);
             this.pnlp1.Controls.Add(this.lblid_p);
             this.pnlp1.Controls.Add(this.txtpproposition);
@@ -80,48 +84,58 @@
             // 
             // btnpajouter
             // 
+            this.btnpajouter.BackColor = System.Drawing.SystemColors.Menu;
             this.btnpajouter.Location = new System.Drawing.Point(23, 26);
             this.btnpajouter.Name = "btnpajouter";
             this.btnpajouter.Size = new System.Drawing.Size(111, 41);
             this.btnpajouter.TabIndex = 0;
             this.btnpajouter.Text = "Ajouter";
-            this.btnpajouter.UseVisualStyleBackColor = true;
+            this.btnpajouter.UseVisualStyleBackColor = false;
+            this.btnpajouter.Click += new System.EventHandler(this.btnpajouter_Click);
             // 
             // btnpmodifier
             // 
+            this.btnpmodifier.BackColor = System.Drawing.SystemColors.Menu;
             this.btnpmodifier.Location = new System.Drawing.Point(168, 26);
             this.btnpmodifier.Name = "btnpmodifier";
             this.btnpmodifier.Size = new System.Drawing.Size(111, 41);
             this.btnpmodifier.TabIndex = 1;
             this.btnpmodifier.Text = "Modifier";
-            this.btnpmodifier.UseVisualStyleBackColor = true;
+            this.btnpmodifier.UseVisualStyleBackColor = false;
+            this.btnpmodifier.Click += new System.EventHandler(this.btnpmodifier_Click);
             // 
             // btnpsupprimer
             // 
+            this.btnpsupprimer.BackColor = System.Drawing.SystemColors.Menu;
             this.btnpsupprimer.Location = new System.Drawing.Point(308, 26);
             this.btnpsupprimer.Name = "btnpsupprimer";
             this.btnpsupprimer.Size = new System.Drawing.Size(111, 41);
             this.btnpsupprimer.TabIndex = 2;
             this.btnpsupprimer.Text = "Supprimer";
-            this.btnpsupprimer.UseVisualStyleBackColor = true;
+            this.btnpsupprimer.UseVisualStyleBackColor = false;
+            this.btnpsupprimer.Click += new System.EventHandler(this.btnpsupprimer_Click);
             // 
             // btnpafficher
             // 
+            this.btnpafficher.BackColor = System.Drawing.SystemColors.Menu;
             this.btnpafficher.Location = new System.Drawing.Point(449, 26);
             this.btnpafficher.Name = "btnpafficher";
             this.btnpafficher.Size = new System.Drawing.Size(111, 41);
             this.btnpafficher.TabIndex = 3;
             this.btnpafficher.Text = "Afficher";
-            this.btnpafficher.UseVisualStyleBackColor = true;
+            this.btnpafficher.UseVisualStyleBackColor = false;
+            this.btnpafficher.Click += new System.EventHandler(this.btnpafficher_Click);
             // 
             // btnpannuler
             // 
+            this.btnpannuler.BackColor = System.Drawing.SystemColors.Menu;
             this.btnpannuler.Location = new System.Drawing.Point(593, 26);
             this.btnpannuler.Name = "btnpannuler";
             this.btnpannuler.Size = new System.Drawing.Size(111, 41);
             this.btnpannuler.TabIndex = 4;
             this.btnpannuler.Text = "Annuler";
-            this.btnpannuler.UseVisualStyleBackColor = true;
+            this.btnpannuler.UseVisualStyleBackColor = false;
+            this.btnpannuler.Click += new System.EventHandler(this.btnpannuler_Click);
             // 
             // dtgp
             // 
@@ -166,6 +180,26 @@
             this.lblproposition.Text = "Proposition : ";
             this.lblproposition.Click += new System.EventHandler(this.lblproposition_Click);
             // 
+            // btnexamen
+            // 
+            this.btnexamen.Location = new System.Drawing.Point(660, 16);
+            this.btnexamen.Name = "btnexamen";
+            this.btnexamen.Size = new System.Drawing.Size(92, 33);
+            this.btnexamen.TabIndex = 5;
+            this.btnexamen.Text = "Examen";
+            this.btnexamen.UseVisualStyleBackColor = true;
+            this.btnexamen.Click += new System.EventHandler(this.btnexamen_Click);
+            // 
+            // btnquestion
+            // 
+            this.btnquestion.Location = new System.Drawing.Point(660, 55);
+            this.btnquestion.Name = "btnquestion";
+            this.btnquestion.Size = new System.Drawing.Size(92, 33);
+            this.btnquestion.TabIndex = 6;
+            this.btnquestion.Text = "Question";
+            this.btnquestion.UseVisualStyleBackColor = true;
+            this.btnquestion.Click += new System.EventHandler(this.btnquestion_Click);
+            // 
             // Proposition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -200,5 +234,7 @@
         private System.Windows.Forms.Label lblid_p;
         private System.Windows.Forms.TextBox txtpproposition;
         private System.Windows.Forms.TextBox txtpid_p;
+        private System.Windows.Forms.Button btnquestion;
+        private System.Windows.Forms.Button btnexamen;
     }
 }

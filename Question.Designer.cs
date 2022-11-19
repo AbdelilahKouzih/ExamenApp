@@ -45,6 +45,8 @@
             this.btnqannuler = new System.Windows.Forms.Button();
             this.txtqquestion = new System.Windows.Forms.TextBox();
             this.lblqquestion = new System.Windows.Forms.Label();
+            this.btnexamen = new System.Windows.Forms.Button();
+            this.btnproposition = new System.Windows.Forms.Button();
             this.pnlq1.SuspendLayout();
             this.pnlq3.SuspendLayout();
             this.pnlq2.SuspendLayout();
@@ -53,6 +55,8 @@
             // 
             // pnlq1
             // 
+            this.pnlq1.Controls.Add(this.btnproposition);
+            this.pnlq1.Controls.Add(this.btnexamen);
             this.pnlq1.Controls.Add(this.lblqquestion);
             this.pnlq1.Controls.Add(this.txtqquestion);
             this.pnlq1.Controls.Add(this.lblid_pro);
@@ -212,6 +216,26 @@
             this.lblqquestion.TabIndex = 7;
             this.lblqquestion.Text = "Question : ";
             // 
+            // btnexamen
+            // 
+            this.btnexamen.Location = new System.Drawing.Point(672, 25);
+            this.btnexamen.Name = "btnexamen";
+            this.btnexamen.Size = new System.Drawing.Size(93, 32);
+            this.btnexamen.TabIndex = 8;
+            this.btnexamen.Text = "Examen";
+            this.btnexamen.UseVisualStyleBackColor = true;
+            this.btnexamen.Click += new System.EventHandler(this.btnexamen_Click);
+            // 
+            // btnproposition
+            // 
+            this.btnproposition.Location = new System.Drawing.Point(672, 63);
+            this.btnproposition.Name = "btnproposition";
+            this.btnproposition.Size = new System.Drawing.Size(93, 32);
+            this.btnproposition.TabIndex = 9;
+            this.btnproposition.Text = "Proposition";
+            this.btnproposition.UseVisualStyleBackColor = true;
+            this.btnproposition.Click += new System.EventHandler(this.btnproposition_Click);
+            // 
             // Question
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,5 +274,7 @@
         private System.Windows.Forms.Button btnqannuler;
         private System.Windows.Forms.Label lblqquestion;
         private System.Windows.Forms.TextBox txtqquestion;
+        private System.Windows.Forms.Button btnproposition;
+        private System.Windows.Forms.Button btnexamen;
     }
 }

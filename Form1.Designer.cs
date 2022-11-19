@@ -39,11 +39,12 @@
             this.btnajouter = new System.Windows.Forms.Button();
             this.btnmodifier = new System.Windows.Forms.Button();
             this.btnsupprimer = new System.Windows.Forms.Button();
-            this.btnvalider = new System.Windows.Forms.Button();
             this.btnannuler = new System.Windows.Forms.Button();
             this.txrid_qu = new System.Windows.Forms.TextBox();
             this.lblid_qu = new System.Windows.Forms.Label();
             this.btnafficher = new System.Windows.Forms.Button();
+            this.btnquestion = new System.Windows.Forms.Button();
+            this.btnproposition = new System.Windows.Forms.Button();
             this.pnl1recherche.SuspendLayout();
             this.pnlbutton.SuspendLayout();
             this.pnl2affichage.SuspendLayout();
@@ -52,6 +53,8 @@
             // 
             // pnl1recherche
             // 
+            this.pnl1recherche.Controls.Add(this.btnproposition);
+            this.pnl1recherche.Controls.Add(this.btnquestion);
             this.pnl1recherche.Controls.Add(this.lblid_qu);
             this.pnl1recherche.Controls.Add(this.txrid_qu);
             this.pnl1recherche.Controls.Add(this.lbrdate_debut);
@@ -67,7 +70,6 @@
             // 
             this.pnlbutton.Controls.Add(this.btnafficher);
             this.pnlbutton.Controls.Add(this.btnannuler);
-            this.pnlbutton.Controls.Add(this.btnvalider);
             this.pnlbutton.Controls.Add(this.btnsupprimer);
             this.pnlbutton.Controls.Add(this.btnmodifier);
             this.pnlbutton.Controls.Add(this.btnajouter);
@@ -160,15 +162,6 @@
             this.btnsupprimer.UseVisualStyleBackColor = true;
             this.btnsupprimer.Click += new System.EventHandler(this.btnsupprimer_Click);
             // 
-            // btnvalider
-            // 
-            this.btnvalider.Location = new System.Drawing.Point(404, 23);
-            this.btnvalider.Name = "btnvalider";
-            this.btnvalider.Size = new System.Drawing.Size(98, 36);
-            this.btnvalider.TabIndex = 3;
-            this.btnvalider.Text = "valider";
-            this.btnvalider.UseVisualStyleBackColor = true;
-            // 
             // btnannuler
             // 
             this.btnannuler.Location = new System.Drawing.Point(532, 23);
@@ -197,13 +190,33 @@
             // 
             // btnafficher
             // 
-            this.btnafficher.Location = new System.Drawing.Point(654, 23);
+            this.btnafficher.Location = new System.Drawing.Point(397, 23);
             this.btnafficher.Name = "btnafficher";
             this.btnafficher.Size = new System.Drawing.Size(99, 36);
             this.btnafficher.TabIndex = 5;
             this.btnafficher.Text = "afficher";
             this.btnafficher.UseVisualStyleBackColor = true;
             this.btnafficher.Click += new System.EventHandler(this.btnafficher_Click);
+            // 
+            // btnquestion
+            // 
+            this.btnquestion.Location = new System.Drawing.Point(628, 20);
+            this.btnquestion.Name = "btnquestion";
+            this.btnquestion.Size = new System.Drawing.Size(96, 38);
+            this.btnquestion.TabIndex = 6;
+            this.btnquestion.Text = "Question";
+            this.btnquestion.UseVisualStyleBackColor = true;
+            this.btnquestion.Click += new System.EventHandler(this.btnquestion_Click);
+            // 
+            // btnproposition
+            // 
+            this.btnproposition.Location = new System.Drawing.Point(628, 68);
+            this.btnproposition.Name = "btnproposition";
+            this.btnproposition.Size = new System.Drawing.Size(96, 38);
+            this.btnproposition.TabIndex = 7;
+            this.btnproposition.Text = "Proposition";
+            this.btnproposition.UseVisualStyleBackColor = true;
+            this.btnproposition.Click += new System.EventHandler(this.btnproposition_Click);
             // 
             // Form1
             // 
@@ -236,13 +249,14 @@
         private System.Windows.Forms.Panel pnl2affichage;
         private System.Windows.Forms.DataGridView dgrExamen;
         private System.Windows.Forms.Button btnannuler;
-        private System.Windows.Forms.Button btnvalider;
         private System.Windows.Forms.Button btnsupprimer;
         private System.Windows.Forms.Button btnmodifier;
         private System.Windows.Forms.Button btnajouter;
         private System.Windows.Forms.Label lblid_qu;
         private System.Windows.Forms.TextBox txrid_qu;
         private System.Windows.Forms.Button btnafficher;
+        private System.Windows.Forms.Button btnproposition;
+        private System.Windows.Forms.Button btnquestion;
     }
 }
 
