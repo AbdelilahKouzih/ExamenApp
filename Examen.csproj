@@ -87,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Proposition.resx">
+      <DependentUpon>Proposition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Question.resx">
       <DependentUpon>Question.cs</DependentUpon>
     </EmbeddedResource>

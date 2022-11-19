@@ -16,5 +16,10 @@ namespace Examen
         {
             InitializeComponent();
         }
+
+        private void lblproposition_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

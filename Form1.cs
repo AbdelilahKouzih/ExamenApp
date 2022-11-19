@@ -100,9 +100,17 @@ namespace Examen
 
         private void btnsupprimer_Click(object sender, EventArgs e)
         {
+            connection();
+            cmd.CommandText = "DELETE FROM E_xamen where id_e='" + txrid_e.Text + "' ";
+            cmd.ExecuteNonQuery();
+            cnx.Close();
+        }
+
+        private void btnannuler_Click(object sender, EventArgs e)
+        {
             txrid_e.Text = null;
-            txrdate_debut.Text=null;
-            txrid_qu.Text=null;
+            txrdate_debut.Text = null;
+            txrid_qu.Text = null;
         }
     }
 }

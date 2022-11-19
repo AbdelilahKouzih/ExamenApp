@@ -177,6 +177,7 @@
             this.btnannuler.TabIndex = 4;
             this.btnannuler.Text = "annuler";
             this.btnannuler.UseVisualStyleBackColor = true;
+            this.btnannuler.Click += new System.EventHandler(this.btnannuler_Click);
             // 
             // txrid_qu
             // 

@@ -32,9 +32,9 @@
             this.pnlq3 = new System.Windows.Forms.Panel();
             this.pnlq2 = new System.Windows.Forms.Panel();
             this.dgrq1 = new System.Windows.Forms.DataGridView();
-            this.txtid_q = new System.Windows.Forms.TextBox();
-            this.txtid_pro = new System.Windows.Forms.TextBox();
-            this.txttype = new System.Windows.Forms.TextBox();
+            this.txtqid_q = new System.Windows.Forms.TextBox();
+            this.txtqid_pro = new System.Windows.Forms.TextBox();
+            this.txtqtype = new System.Windows.Forms.TextBox();
             this.lblid_q = new System.Windows.Forms.Label();
             this.lbltype = new System.Windows.Forms.Label();
             this.lblid_pro = new System.Windows.Forms.Label();
@@ -43,6 +43,8 @@
             this.btnqsupprimer = new System.Windows.Forms.Button();
             this.btnqafficher = new System.Windows.Forms.Button();
             this.btnqannuler = new System.Windows.Forms.Button();
+            this.txtqquestion = new System.Windows.Forms.TextBox();
+            this.lblqquestion = new System.Windows.Forms.Label();
             this.pnlq1.SuspendLayout();
             this.pnlq3.SuspendLayout();
             this.pnlq2.SuspendLayout();
@@ -51,15 +53,17 @@
             // 
             // pnlq1
             // 
+            this.pnlq1.Controls.Add(this.lblqquestion);
+            this.pnlq1.Controls.Add(this.txtqquestion);
             this.pnlq1.Controls.Add(this.lblid_pro);
             this.pnlq1.Controls.Add(this.lbltype);
             this.pnlq1.Controls.Add(this.lblid_q);
-            this.pnlq1.Controls.Add(this.txttype);
-            this.pnlq1.Controls.Add(this.txtid_pro);
-            this.pnlq1.Controls.Add(this.txtid_q);
+            this.pnlq1.Controls.Add(this.txtqtype);
+            this.pnlq1.Controls.Add(this.txtqid_pro);
+            this.pnlq1.Controls.Add(this.txtqid_q);
             this.pnlq1.Location = new System.Drawing.Point(11, 9);
             this.pnlq1.Name = "pnlq1";
-            this.pnlq1.Size = new System.Drawing.Size(778, 115);
+            this.pnlq1.Size = new System.Drawing.Size(778, 144);
             this.pnlq1.TabIndex = 0;
             // 
             // pnlq3
@@ -77,41 +81,42 @@
             // pnlq2
             // 
             this.pnlq2.Controls.Add(this.dgrq1);
-            this.pnlq2.Location = new System.Drawing.Point(11, 130);
+            this.pnlq2.Location = new System.Drawing.Point(11, 156);
             this.pnlq2.Name = "pnlq2";
-            this.pnlq2.Size = new System.Drawing.Size(778, 291);
+            this.pnlq2.Size = new System.Drawing.Size(778, 265);
             this.pnlq2.TabIndex = 2;
             // 
             // dgrq1
             // 
             this.dgrq1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrq1.Location = new System.Drawing.Point(-1, 0);
+            this.dgrq1.Location = new System.Drawing.Point(-1, 3);
             this.dgrq1.Name = "dgrq1";
             this.dgrq1.RowHeadersWidth = 51;
             this.dgrq1.RowTemplate.Height = 24;
-            this.dgrq1.Size = new System.Drawing.Size(776, 288);
+            this.dgrq1.Size = new System.Drawing.Size(776, 285);
             this.dgrq1.TabIndex = 0;
             // 
-            // txtid_q
+            // txtqid_q
             // 
-            this.txtid_q.Location = new System.Drawing.Point(199, 25);
-            this.txtid_q.Name = "txtid_q";
-            this.txtid_q.Size = new System.Drawing.Size(142, 22);
-            this.txtid_q.TabIndex = 0;
+            this.txtqid_q.Location = new System.Drawing.Point(199, 25);
+            this.txtqid_q.Name = "txtqid_q";
+            this.txtqid_q.Size = new System.Drawing.Size(142, 22);
+            this.txtqid_q.TabIndex = 0;
+            this.txtqid_q.TextChanged += new System.EventHandler(this.txtid_q_TextChanged);
             // 
-            // txtid_pro
+            // txtqid_pro
             // 
-            this.txtid_pro.Location = new System.Drawing.Point(199, 84);
-            this.txtid_pro.Name = "txtid_pro";
-            this.txtid_pro.Size = new System.Drawing.Size(142, 22);
-            this.txtid_pro.TabIndex = 1;
+            this.txtqid_pro.Location = new System.Drawing.Point(199, 112);
+            this.txtqid_pro.Name = "txtqid_pro";
+            this.txtqid_pro.Size = new System.Drawing.Size(142, 22);
+            this.txtqid_pro.TabIndex = 1;
             // 
-            // txttype
+            // txtqtype
             // 
-            this.txttype.Location = new System.Drawing.Point(199, 53);
-            this.txttype.Name = "txttype";
-            this.txttype.Size = new System.Drawing.Size(142, 22);
-            this.txttype.TabIndex = 2;
+            this.txtqtype.Location = new System.Drawing.Point(199, 84);
+            this.txtqtype.Name = "txtqtype";
+            this.txtqtype.Size = new System.Drawing.Size(142, 22);
+            this.txtqtype.TabIndex = 2;
             // 
             // lblid_q
             // 
@@ -126,7 +131,7 @@
             // lbltype
             // 
             this.lbltype.AutoSize = true;
-            this.lbltype.Location = new System.Drawing.Point(66, 59);
+            this.lbltype.Location = new System.Drawing.Point(66, 90);
             this.lbltype.Name = "lbltype";
             this.lbltype.Size = new System.Drawing.Size(45, 16);
             this.lbltype.TabIndex = 4;
@@ -135,7 +140,7 @@
             // lblid_pro
             // 
             this.lblid_pro.AutoSize = true;
-            this.lblid_pro.Location = new System.Drawing.Point(66, 87);
+            this.lblid_pro.Location = new System.Drawing.Point(66, 118);
             this.lblid_pro.Name = "lblid_pro";
             this.lblid_pro.Size = new System.Drawing.Size(94, 16);
             this.lblid_pro.TabIndex = 5;
@@ -149,6 +154,7 @@
             this.btnqajouter.TabIndex = 0;
             this.btnqajouter.Text = "Ajouter";
             this.btnqajouter.UseVisualStyleBackColor = true;
+            this.btnqajouter.Click += new System.EventHandler(this.btnqajouter_Click);
             // 
             // btnqmodifier
             // 
@@ -158,6 +164,7 @@
             this.btnqmodifier.TabIndex = 1;
             this.btnqmodifier.Text = "Modifier";
             this.btnqmodifier.UseVisualStyleBackColor = true;
+            this.btnqmodifier.Click += new System.EventHandler(this.btnqmodifier_Click);
             // 
             // btnqsupprimer
             // 
@@ -167,6 +174,7 @@
             this.btnqsupprimer.TabIndex = 2;
             this.btnqsupprimer.Text = "Supprimer";
             this.btnqsupprimer.UseVisualStyleBackColor = true;
+            this.btnqsupprimer.Click += new System.EventHandler(this.btnqsupprimer_Click);
             // 
             // btnqafficher
             // 
@@ -180,12 +188,29 @@
             // 
             // btnqannuler
             // 
-            this.btnqannuler.Location = new System.Drawing.Point(628, 43);
+            this.btnqannuler.Location = new System.Drawing.Point(627, 43);
             this.btnqannuler.Name = "btnqannuler";
             this.btnqannuler.Size = new System.Drawing.Size(121, 41);
             this.btnqannuler.TabIndex = 4;
             this.btnqannuler.Text = "Annuler";
             this.btnqannuler.UseVisualStyleBackColor = true;
+            this.btnqannuler.Click += new System.EventHandler(this.btnqannuler_Click);
+            // 
+            // txtqquestion
+            // 
+            this.txtqquestion.Location = new System.Drawing.Point(199, 53);
+            this.txtqquestion.Name = "txtqquestion";
+            this.txtqquestion.Size = new System.Drawing.Size(142, 22);
+            this.txtqquestion.TabIndex = 6;
+            // 
+            // lblqquestion
+            // 
+            this.lblqquestion.AutoSize = true;
+            this.lblqquestion.Location = new System.Drawing.Point(66, 59);
+            this.lblqquestion.Name = "lblqquestion";
+            this.lblqquestion.Size = new System.Drawing.Size(69, 16);
+            this.lblqquestion.TabIndex = 7;
+            this.lblqquestion.Text = "Question : ";
             // 
             // Question
             // 
@@ -215,13 +240,15 @@
         private System.Windows.Forms.Label lblid_pro;
         private System.Windows.Forms.Label lbltype;
         private System.Windows.Forms.Label lblid_q;
-        private System.Windows.Forms.TextBox txttype;
-        private System.Windows.Forms.TextBox txtid_pro;
-        private System.Windows.Forms.TextBox txtid_q;
+        private System.Windows.Forms.TextBox txtqtype;
+        private System.Windows.Forms.TextBox txtqid_pro;
+        private System.Windows.Forms.TextBox txtqid_q;
         private System.Windows.Forms.Button btnqafficher;
         private System.Windows.Forms.Button btnqsupprimer;
         private System.Windows.Forms.Button btnqmodifier;
         private System.Windows.Forms.Button btnqajouter;
         private System.Windows.Forms.Button btnqannuler;
+        private System.Windows.Forms.Label lblqquestion;
+        private System.Windows.Forms.TextBox txtqquestion;
     }
 }
